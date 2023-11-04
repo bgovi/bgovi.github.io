@@ -11,7 +11,7 @@
   <MathSkills />
   <!-- <Travel /> -->
 
-  <!-- Footer -->
+  <FooterBar />
   <!-- <footer class="footer">
     <div class="section-heading">
       <p>
@@ -26,18 +26,19 @@
 </template>
 
 <script>
-import NavBar from '~/components/portfolio/Navigation.vue'
-import HeroBody from '~/components/portfolio/HeroBody.vue'
+import NavBar      from '~/components/portfolio/Navigation.vue'
+import HeroBody    from '~/components/portfolio/HeroBody.vue'
 import Projects    from '~/components/portfolio/Projects.vue'
-import About    from '~/components/portfolio/About.vue'
-import Skills    from '~/components/portfolio/Skills.vue'
-import MathSkills    from '~/components/portfolio/MathSkills.vue'
-import Travel    from '~/components/portfolio/Travel.vue'
+import About       from '~/components/portfolio/About.vue'
+import Skills      from '~/components/portfolio/Skills.vue'
+import MathSkills  from '~/components/portfolio/MathSkills.vue'
+import Travel      from '~/components/portfolio/Travel.vue'
+import FooterBar   from '~/components/portfolio/FooterBar.vue'
 
 export default {
     components: {
         NavBar, HeroBody, About, Projects, 
-        Skills, MathSkills, Travel
+        Skills, MathSkills, Travel, FooterBar
     }
 
 }

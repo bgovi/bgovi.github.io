@@ -33,7 +33,8 @@ export default {
                 {'title': 'TACOS', 'description': "sup" },
                 {'title': 'SPRING', 'description':  "sup" },
                 {'title': 'MDM', 'description': "sup" },
-                {'title': 'VuConn', 'description':  "sup" }
+                {'title': 'VuConn (In Development)', 'description':  "sup" },
+                {'title': 'Peer Development', 'description':  "sup" }
             ]
         }
     }
