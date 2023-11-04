@@ -8,8 +8,15 @@
         </h1>
         <h2 class="subtitle is-3">
           Data Scientist/Engineer <br>
-          Full Stack Web App Developer
+          Full Stack Web App Developer <br>
+          Bioinformatician
         </h2>
+        <div class="buttons">
+          <button class="button is-link">Resume\CV</button>
+          <button class="button is-medium">Github</button>
+          <button class="button is-link">Linkedin</button>
+          <button class="button is-link">bgovi@umich.edu</button>
+        </div>
       </div>
     </div>
   </section>

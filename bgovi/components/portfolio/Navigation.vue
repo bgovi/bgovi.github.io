@@ -17,11 +17,11 @@
           </span>
           <span>About</span>
         </a>
-        <a class="navbar-item" href="#services">
+        <a class="navbar-item" href="#skills">
           <span class="icon">
             <i class="fas fa-bars"></i>
           </span>
-          <span>Services</span>
+          <span>Skills</span>
         </a>
         <a class="navbar-item" href="#resume">
           <span class="icon">
