@@ -36,6 +36,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+  
   ],
   /*
   ** Auto import components
@@ -53,6 +54,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'nuxt-leaflet'
   ],
   /*
   ** Axios module configuration
