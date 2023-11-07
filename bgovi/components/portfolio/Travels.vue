@@ -22,14 +22,19 @@
                 </div>
             </div>
         </div>
+        <Divider />
     </div>
   </section>
 </template>
 
 <script>
 // import L from "leaflet";
+import Divider      from '~/components/portfolio/Divider.vue'
+
+
 
 export default {
+  components: { Divider },
   data() {
     return {
       map: null,

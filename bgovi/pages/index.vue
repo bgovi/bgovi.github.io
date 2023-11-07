@@ -1,74 +1,47 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        bgovi
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-         <button class="button is-primary is-light">Primary</button>
-      </div>
+    
+
+<div>
+  <!-- Navigation bar -->
+  <NavBar />
+  <HeroBody />
+  <About />
+  <Travels />
+  <Projects />
+  <Skills />
+  <MathSkills />
+  <Articles />
+
+  <FooterBar />
+  <!-- <footer class="footer">
+    <div class="section-heading">
+      <p>
+        <strong>Bulma Personal Template</strong> by <a href="https://mubaidr.js.org">Muhammad Ubaid Raza</a>. The
+        source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
+      </p>
     </div>
-  </div>
+  </footer> -->
+</div>
+
 </template>
 
 <script>
-export default {}
+import NavBar      from '~/components/portfolio/Navigation.vue'
+import Travels     from '~/components/portfolio/Travels.vue'
+import HeroBody    from '~/components/portfolio/HeroBody.vue'
+import Projects    from '~/components/portfolio/Projects.vue'
+import About       from '~/components/portfolio/About.vue'
+import Skills      from '~/components/portfolio/Skills.vue'
+import MathSkills  from '~/components/portfolio/MathSkills.vue'
+import FooterBar   from '~/components/portfolio/FooterBar.vue'
+import Articles    from '~/components/portfolio/Articles.vue'
+
+export default {
+    components: {
+        NavBar, HeroBody, About,Travels , Projects, 
+        Skills, MathSkills, Articles, FooterBar, 
+    }
+}
+
 </script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>

@@ -20,14 +20,16 @@
                 </div>
             </div>
         </div>
+        <Divider />
     </div>
   </section>
 </template>
 
 <script>
-
+import Divider      from '~/components/portfolio/Divider.vue'
 
 export default {
+    components: { Divider },
     data() {
         return {
             projects: [

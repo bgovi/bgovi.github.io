@@ -5,7 +5,7 @@
       <div class="container">
         <div class="columns">
             <div class="column is-one-fifth">
-                <h3 class="title is-2">Math</h3>
+                <h3 class="title is-2">Articles</h3>
             </div>
             <div class="column is-four-fifths">
                 <p>Web developer with more than <strong>4 years</strong> of well-rounded experience with a degree in the
@@ -17,29 +17,6 @@
                 </p>
             </div>
         </div>
-        <Divider />
     </div>
-<!-- 
-Math Areas
-Continuing Studies:
-Matrix and Tensor Algebra
-Network Topology and Analysis
-Optimization under constraints
-Max/Min Problems
-Graph Theory
-Quiver Mathematics
-Similarity Functions
-General ML
-Algebra
-Probability and Combinatorics
-
-AI
-Transfer Learning and Real Time Parameter Updates
--->
   </section>
 </template>
-
-<script>
-import Divider      from '~/components/portfolio/Divider.vue'
-export default { components: { Divider } }
-</script>

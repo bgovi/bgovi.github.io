@@ -17,17 +17,12 @@
                 </p>
             </div>
         </div>
-        <div class="divider"></div>
+        <Divider />
     </div>
   </section>
 </template>
 
-<style scoped>
-.divider {
-  height: 2px; /* Adjust the height as needed */
-  background-color:  #ccc; /* Adjust the color */
-  margin-top: 30px;
-   /* margin: 20px 0; Adjust the margin to control the spacing */
-}
-
-</style>
+<script>
+import Divider      from '~/components/portfolio/Divider.vue'
+export default { components: { Divider } }
+</script>
