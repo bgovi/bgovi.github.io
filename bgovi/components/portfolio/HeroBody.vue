@@ -12,12 +12,33 @@
           Bioinformatician
         </h2>
         <div class="buttons">
-          <button class="button is-link">Resume\CV</button>
-          <button class="button is-medium">Github</button>
-          <button class="button is-link">Linkedin</button>
-          <button class="button is-link">bgovi@umich.edu</button>
+          <button class="button is-link custom-white-border custom-hover-border">Resume\CV</button>
+          <button class="button is-link custom-white-border custom-hover-border">Github</button>
+          <button class="button is-link custom-white-border custom-hover-border">Linkedin</button>
+          <button class="button is-link custom-white-border custom-hover-border">bgovi@umich.edu</button>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+
+<style scoped>
+
+.custom-white-border {
+  border-color: white;
+}
+
+.custom-hover-border:hover {
+  border-color: white; /* Replace with your desired border color */
+}
+
+.custom-hover-border:focus {
+  border-color: white; /* Replace with your desired border color */
+}
+
+.custom-hover-border:active {
+  border-color: white; /* Replace with your desired border color */
+}
+
+</style>

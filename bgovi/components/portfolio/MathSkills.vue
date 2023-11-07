@@ -18,5 +18,22 @@
             </div>
         </div>
     </div>
+<!-- 
+Math Areas
+Continuing Studies:
+Matrix and Tensor Algebra
+Network Topology and Analysis
+Optimization under constraints
+Max/Min Problems
+Graph Theory
+Quiver Mathematics
+Similarity Functions
+General ML
+Algebra
+Probability and Combinatorics
+
+AI
+Transfer Learning and Real Time Parameter Updates
+-->
   </section>
 </template>
