@@ -98,7 +98,21 @@ export default {
         {'name': 'Mexico City, Mexico', 'coords': [19.4326296, -99.1331785]} ,
         {'name': 'Bogota, Colombia', 'coords': [4.6529539, -74.0835643]} ,
         {'name': 'La Paz, Bolivia', 'coords': [-16.4955455, -68.1336229]} ,
-        {'name': 'Uyuni, Bolivia', 'coords': [-20.4628406, -66.8239072]}
+        {'name': 'Uyuni, Bolivia', 'coords': [-20.4628406, -66.8239072]},
+        {'name': 'New Orleans, LA, USA', 'coords': [29.9759983, -90.0782127]} ,
+        {'name': 'St. Louis, MO, USA', 'coords': [38.6280278, -90.1910154]} ,
+        {'name': 'Wichita, KS, USA', 'coords': [37.6922361, -97.3375448]} ,
+        {'name': 'Milwaukee, WI, USA', 'coords': [43.0349931, -87.922497]} ,
+        {'name': 'Urbana, IL, USA', 'coords': [40.1117174, -88.207301]} ,
+        {'name': 'Pullman, WA, USA', 'coords': [46.7304268, -117.173895]} ,
+        {'name': 'Moscow, ID, USA', 'coords': [46.7323875, -117.000165]} ,
+        {'name': 'Saint John, U.S Virgin Islands', 'coords': [18.335601349999997, -64.75504062120726]} ,
+        {'name': 'Saint Thomas, U.S. Virgin Islands', 'coords': [18.34290815, -64.91889970060265]} ,
+        {'name': 'Reykjavík, Iceland', 'coords': [64.145981, -21.9422367]} ,
+        {'name': 'Providence, RI, USA', 'coords': [41.8239891, -71.4128343]} ,
+        {'name': 'Hartford, CT, USA', 'coords': [41.764582, -72.6908547]} ,
+        {'name': 'Montreal, Canada', 'coords': [45.5031824, -73.5698065]} ,
+        {'name': 'Toronto, Canada', 'coords': [43.6534817, -79.3839347]} 
       ],
     };
   } //,
