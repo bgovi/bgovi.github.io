@@ -45,3 +45,11 @@
     </div>
   </nav>
 </template>
+
+<style scoped>
+
+.navbar {
+  z-index: 5000;
+}
+
+</style>

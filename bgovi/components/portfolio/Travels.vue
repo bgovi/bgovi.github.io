@@ -74,5 +74,9 @@ export default {
 #map {
   height: 400px;
   width: 100%;
+  position: relative; /* Relative position to allow z-index to work */
+  z-index: 999; /* Lower z-index to keep it below the navbar */
+
+
 }
 </style>
