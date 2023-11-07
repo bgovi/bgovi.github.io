@@ -6,7 +6,6 @@
   <NavBar />
   <HeroBody />
   <About />
-
   <Travels />
   <Projects />
   <Skills />
