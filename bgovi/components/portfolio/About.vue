@@ -8,7 +8,7 @@
                 <h3 class="title is-2">About</h3>
             </div>
             <div class="column is-four-fifths">
-<p>
+<p class="has-text-justified">
 <strong>Overview: </strong>
 My general interests is around converting mathematics and knowledge into something tangible. 
 
@@ -26,8 +26,8 @@ complex problems into simpler, more doable things.
 
 Also, math is hard and I'm constantly trying to get better at it and incorporate it into my work.
 </p>
-
-<p>
+<br>
+<p class="has-text-justified">
 <strong>Fun: </strong>
 You can often find me on the mat. Since my early teens I have been actively involved in wrestling, judo and jujitsu. I spend a lot of time
 doing calistenics, hiking, and biking. More leisure activities include: travel, food, curtural events, museums, modern history, 
@@ -41,8 +41,8 @@ Also, math is hard and I'm constantly trying to get better at it and incorporate
 
 
 
-
-<p> 
+<br>
+<p class="has-text-justified"> 
 <strong> Short Bio: </strong> My professional and academic interest began junior year at Indiana University Bloomington when I took biochemistry.
 Biochemistry provided me a conceptual understanding of biology using organic chemistry and thermodynamics.
 After completing the biochemistry course, I joined a laboratory as a research assistant.
@@ -61,8 +61,8 @@ computational areas as possible. The lab I joined utilized images, statistics, s
 domain knowledge to understand protein structure, function and dynamics.
 </p>
 
-
-<p>
+<br>
+<p class="has-text-justified">
 <strong> Alpha Fold and Career Change: </strong>
 AI impact and costs
 
@@ -80,26 +80,39 @@ Return To Data:
 Currently, doing xyz looking forward to the next set of challenging problems to solve.
 </p>
 
-<strong> Long Term Interests: </strong> Relationships, Graphs, Networks and Other Connected Structures: 
+<!-- <strong> Long Term Interests: </strong> Relationships, Graphs, Networks and Other Connected Structures:  -->
 
 <!-- 3 bullet points per row -->
+    <!-- <strong> Career Objectives: </strong> -->
+<br>
+<p>
+<strong> Career Interets: </strong>
+
+
+</p>
+
 
 <div>
-  <br>
-<span class="tag is-link is-medium mr-2 mb-1" v-for="(field, tx_index) in fields" :key="tx_index" > {{field}} </span>
+
+    <h1 class="title has-text-centered">Technical/Specialized Interests</h1>
+
+<div class="columns" v-for="i in range(0, 12, 3)" :key="i">
+                <div class="column is-one-third content is-normal" style="margin: 0px; padding: 0px;">
+                    <ul> <li>{{fields[i]}}</li> </ul>
+                </div>
+                <div class="column is-one-third content is-normal" style="margin: 0px; padding: 0px;">
+                   <ul> <li>{{fields[i+1]}}</li> </ul>
+                </div>
+                <div class="column is-one-third content is-normal" style="margin: 0px; padding: 0px;">
+                   <ul> <li>{{fields[i+2]}}</li> </ul>
+                </div>
+      </div>
 </div>
 
 
 
-<p>
-<strong> Rent's Due: </strong>
-You read all these things of where doctoral students go after they graduate. Most people come in with the intent of academia,
-and that’s where I’d like to go, but the path there is becoming more and more questionable. What I’m going to do is THE question. 
-I’ve looked at some of the real world jobs that I would be qualified for and many of these jobs pay well but they aren’t important – 
-there’s no impact. All the impact for someone like me is at the University.
 
 
-</p>
             </div>
         </div>
         <Divider />
@@ -113,6 +126,10 @@ export default {
   components: { Divider },
   data() {
     return {
+      career: [
+        'Learn new things', 'Work on interesting problems', 'Enjoy the company of team members', 'Being able to pay my mortgage'
+      ],
+
       fields: [
           'General Data Science and Data Engineering',
           'Matrix and Tensor Algebra',
@@ -128,7 +145,21 @@ export default {
           'Financial/Investment Mathematics' 
       ]
     }
-  }
+  },
+    methods: {
+        range(start, end, step) {
+            step = step || 1;
+            const result = [];
+            for (let i = start; i <= end; i += step) {
+            result.push(i);
+            }
+            return result;
+        }
+    }
+
 }
+
+
+
 
 </script>

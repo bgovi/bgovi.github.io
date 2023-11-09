@@ -37,7 +37,6 @@ export default {
                 {'title': 'SPRING: Mapping Monomeric Threading to Protein−Protein Structure Prediction ', 'description':  spring_description },
                 {'title': 'MDM: Full Stack Master Data Management System', 'description': mdm_description },
                 {'title': 'VuConn: Virtualized User Connections (In Development)', 'description':  vuconn_description }
-                //, {'title': 'Aggrid Fullstack: Framework for full stack survey and table applications', 'description':  aggrid_description }
             ]
         }
     }
@@ -46,18 +45,15 @@ export default {
 let tacos_description = `
 I developed one of the first fully automated pipelines for template based quaternary structure prediction 
 starting from sequence. Two critical steps for template based modeling are identifying the correct homologous 
-structures by threading which generates sequence to structure alignments and refining the initial threading template 
-coordinates closer to the native conformation.
+structures by threading which generates sequence to structure alignments a
 
-
-When user submits an amino acid sequence, the server first tries to retrieve template proteins of similar folds 
-(or super-secondary structures) from locally installed meta-threading approach.
-In the second step, the continuous fragments excised from the PDB templates are reassembled into full-length models 
+the continuous fragments excised from the PDB templates are reassembled into full-length models 
 by replica-exchange Monte Carlo simulations with the threading unaligned regions (mainly loops) built by ab initio modeling.
 
-I included intramolecular domain-domain interfaces into the PDB 
-library to boost template recognition of protein dimers; the merging of the two classes of interfaces improved 
-recognition of heterodimers by 40% using benchmark settings. Next the template based assembly of protein complexes pipeline, 
+
+and refining the initial threading template 
+coordinates closer to the native conformation.
+
 TACOS, was created. The pipeline combines threading templates and domain knowledge from the PDB into a knowledge based energy score. 
 The energy score is integrated into a Monte Carlo sampling simulation that drives the initial template closer to the native topology.
 In the third step, the fragment assembly simulation is performed again starting from the SPICKER cluster centroids, 
@@ -97,16 +93,6 @@ It's essential to secure the virtual connection to the database to prevent unaut
 In many applications, connection pooling is used to efficiently manage virtual database connections. Connection pooling allows multiple instances of the application to share a limited number of connections, reducing the overhead of opening and closing connections repeatedly.
 `
 vuconn_description = vuconn_description.replace(/\n/g, ' ')
-
-let aggrid_description = `
-In summary, a virtual connection to a database is a critical link that enables an application to interact with a database management system. It allows the application to perform various database operations while ensuring security, reliability, and efficient resource usage.
-Properly managing these connections is essential for the smooth operation of applications that rely on databases for data storage and retrieval.
-
-It's essential to secure the virtual connection to the database to prevent unauthorized access and data breaches. This involves using secure authentication methods, encryption, and access control mechanisms
-
-In many applications, connection pooling is used to efficiently manage virtual database connections. Connection pooling allows multiple instances of the application to share a limited number of connections, reducing the overhead of opening and closing connections repeatedly.
-`
-aggrid_description = aggrid_description.replace(/\n/g, ' ')
 
 
 

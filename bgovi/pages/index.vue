@@ -5,11 +5,10 @@
   <!-- Navigation bar -->
   <NavBar />
   <HeroBody />
-  <About />
+  <About /> 
   <Travels />
   <Projects />
   <Skills />
-  <!-- <MathSkills /> -->
   <Articles />
   <FooterBar />
 </div>
