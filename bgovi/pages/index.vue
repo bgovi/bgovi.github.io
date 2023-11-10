@@ -3,13 +3,13 @@
 
 <div>
   <!-- Navigation bar -->
-  <NavBar />
+  <!-- <NavBar /> -->
   <HeroBody />
   <About /> 
   <Travels />
   <Projects />
   <Skills />
-  <Articles />
+  <!-- <Articles /> -->
   <FooterBar />
 </div>
 

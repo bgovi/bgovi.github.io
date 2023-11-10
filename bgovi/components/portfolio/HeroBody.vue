@@ -12,10 +12,10 @@
           Bioinformatician
         </h2>
         <div class="buttons">
-          <button class="button is-link custom-white-border custom-hover-border">Resume\CV</button>
-          <button class="button is-link custom-white-border custom-hover-border">Github</button>
-          <button class="button is-link custom-white-border custom-hover-border">Linkedin</button>
-          <button class="button is-link custom-white-border custom-hover-border">bgovi@umich.edu</button>
+          <a href="/BrandonGovindarajooResume.pdf" download="" class="button is-link custom-white-border custom-hover-border">Resume</a>
+          <a href="https://github.com/bgovi" class="button is-link custom-white-border custom-hover-border">Github</a>
+          <a href="https://www.linkedin.com/in/bgovi/" class="button is-link custom-white-border custom-hover-border">Linkedin</a>
+          <p style="margin: 0px 8px 8px 0px;">bgovi@umich.edu</p>
         </div>
       </div>
     </div>

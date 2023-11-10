@@ -22,22 +22,8 @@
         </div>
     </div>
 
-
-
-    <!--<div class="column is-two-fifths">
-        <div v-for="(skill, index) in skills_1" :key="index">
-            <h4 class ="title is-4" style="margin-bottom: 3px;" > {{ skill.category}} </h4>
-            <span class="tag is-link is-medium mr-2 mb-1" v-for="(typex, tx_index) in skill.types" :key="tx_index" > {{typex}} </span>
-        </div>
-    </div>
-    <div class="column is-two-fifths">
-        <div v-for="(skill, index) in skills_2" :key="index">
-            <h4 class ="title is-4" style="margin-bottom: 3px;"> {{ skill.category}} </h4>
-            <span class="tag is-link is-medium mr-2 mb-1" v-for="(typex, tx_index) in skill.types" :key="tx_index" > {{typex}} </span>
-        </div>
-    </div> -->
 </div>
-<Divider />
+<!-- <Divider /> -->
 </div>
 </section>
 </template>
