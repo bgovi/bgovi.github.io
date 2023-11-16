@@ -72,7 +72,7 @@ enjoying the workplace culture and my interaction with team members, and being a
 <br>
 <div class="content">
     <h4 class="has-text-centered">Technical/Specialized Interests</h4>
-      <div class="columns" v-for="i in range(0, 12, 3)" :key="i">
+      <div class="columns column-mobile-padding" v-for="i in range(0, 12, 3)" :key="i">
                 <div class="column is-one-third content is-normal" style="margin: 0px; padding: 0px;">
                     <ul> <li>{{fields[i]}}</li> </ul>
                 </div>
@@ -138,3 +138,15 @@ export default {
 
 
 </script>
+
+<style scoped>
+
+
+@media screen and (max-width: 768px) {
+  .column-mobile-padding {
+    margin-bottom: 30px;
+  }
+}
+
+
+</style>
