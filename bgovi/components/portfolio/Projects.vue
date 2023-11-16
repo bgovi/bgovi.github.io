@@ -11,10 +11,14 @@
                 <div v-for="(project, index) in projects" :key="index">
                     <article class="message is-link mb-5">
                     <div class="message-header">
-                        <p>{{project.title}}</p>
+                       <p> 
+                       <nuxt-link :to="project.href.name" style="text-decoration:none">{{project.title}}</nuxt-link>
+                       </p>
                     </div>
                     <div class="message-body">
                         {{project.description}}
+
+                        <nuxt-link :to="project.href.name"><strong> Click to view full page. </strong> </nuxt-link> 
                     </div>
                     </article>
                 </div>
@@ -33,10 +37,10 @@ export default {
     data() {
         return {
             projects: [
-                {'title': 'TACOS: Template Based Assembly of Comples Structures', 'description': tacos_description },
-                {'title': 'SPRING: Mapping Monomeric Threading to Protein−Protein Structure Prediction ', 'description':  spring_description },
-                {'title': 'MDM: Full Stack Master Data Management System', 'description': mdm_description },
-                {'title': 'VuConn: Virtualized User Connections (In Development)', 'description':  vuconn_description }
+                {'title': 'TACOS: Template Based Assembly of Comples Structures', 'description': tacos_description, 'href': {"name":"/projects/tacos"} },
+                {'title': 'SPRING: Mapping Monomeric Threading to Protein−Protein Structure Prediction ', 'description':  spring_description, 'href': {"name":"/projects/spring"} },
+                {'title': 'MDM: Full Stack Master Data Management System', 'description': mdm_description, 'href': {"name":"/projects/mdm"} },
+                {'title': 'VuConn: Virtualized User Connections (In Development)', 'description':  vuconn_description, 'href': {"name":"/projects/vuconn"} }
             ]
         }
     }
