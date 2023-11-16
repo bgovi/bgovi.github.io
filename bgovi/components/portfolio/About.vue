@@ -47,7 +47,7 @@ What led me into math and physics was the fact that in biochemistry we talked a 
 functions and pathways but very little about how and why these macromolecules develop and perform these various functions – that’s 
 more of a physics kind of question. I decided I wanted to study how these proteins develop structure and function.
  
-So I searched for different programs that would allow me to develop the needed technical skills. I discovered the Bioinformatics Ph.D. 
+So, I searched for different programs that would allow me to develop the needed technical skills. I discovered the Bioinformatics Ph.D. 
 program at the University of Michigan. Besides my general interests in proteins, I wanted a career path that touched as many 
 computational areas as possible. The lab I joined utilized images, statistics, sequence analysis, text, profiles, physics and 
 domain knowledge to understand protein structure, function and dynamics.
@@ -59,12 +59,12 @@ domain knowledge to understand protein structure, function and dynamics.
 Nearing the end of my dissertation, the full capabilities of neural networks started to become apparent. The underlying algorithms were
 approachable, but the cost to run them not so much. It still surprises me that the cost of my simulations approximately a couple dollars were
 as Googles Deep Mind was spending 250K to a few million per simulation. Since the takeover, I have been spending time working to diversify my skills, 
-and find ways to harness the newly generated models and technologies in an affordable manor.
+and find ways to harness the newly generated models and technologies in an affordable manner.
 </p>
 
 <br>
 <p class="has-text-justified">
-<strong > Career Interets: </strong> I would consider my self a life long learner. 
+<strong > Career Interests: </strong> I would consider myself a lifelong learner. 
 My work aspirations generally contain the following themes: learn something new, work on interesting problems,
 enjoying the workplace culture and my interaction with team members, and being able to pay my mortgage.
 </p>
