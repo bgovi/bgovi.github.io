@@ -1,39 +1,125 @@
 <template>
-<!-- <figure class="image is-16by9">
-  <iframe class="has-ratio" width="640" height="360" src="https://www.youtube.com/embed/YE7VzlLtp-4" frameborder="0" allowfullscreen></iframe>
-</figure> -->
+<div>
 
 
 
-<div class="container is-max-desktop">
-  <div class="image is-16x9">
-    <img src="https://bulma.io/images/placeholders/256x256.png" alt="Mobile Image">
+
+<div class='column is-one-quarter'>
+  <div class='card equal-height'>
+    <div class="card-image has-text-centered">
+        <figure class="image is-64x64 is-inline-block">
+              <img src="https://bulma.io/images/placeholders/256x256.png">
+        </figure>
+    </div>
+    <div class='card-content'>
+      <!-- other content here -->
+    </div>
   </div>
 </div>
 
 
-  <!-- <div class="image-container">
-    <figure class="image is-16by9">
-      <img 
-        srcset="image-mobile.jpg 480w,
-                image-tablet.jpg 768w,
-                image-desktop.jpg 1024w,
-                image-widescreen.jpg 1216w,
-                image-fullhd.jpg 1408w"
-        sizes="(max-width: 480px) 100vw,
-               (max-width: 768px) 100vw,
-               (max-width: 1024px) 100vw,
-               (max-width: 1216px) 100vw,
-               1408px"
-        src="image-fullhd.jpg"
-        alt="Your Image"
-      >
+
+
+
+
+
+
+
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <div>
+          <div style ="width: 500px;" class="is-centered">
+
+            <figure class="image is-square is-centered">
+              <img src="https://bulma.io/images/placeholders/256x256.png">
+            </figure>
+          </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+<section class="section">
+  <div class="container has-text-centered">
+    <div>
+    <div style="max-width: 500px">
+
+          <figure class="image is-square">
+            <img src="https://bulma.io/images/placeholders/256x256.png">
+          </figure>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- doesnt work at all -->
+<div class = "container">
+  <div class="level">
+    <div style="max-width: 200px" class="level-item has-text-centered">
+      <figure class="image is-square">
+        <img src="https://bulma.io/images/placeholders/256x256.png">
+      </figure>
+    </div>
+  </div>
+</div>
+  
+
+<!-- centered, resizes and can set width approx. But I dont want it to resize until there is no white space on either side -->
+<div class="columns is-desktop">
+  <div class="column is-half is-offset-one-quarter">
+      <div class="image is-1x1">
+          <img src="https://bulma.io/images/placeholders/256x256.png" alt="Mobile Image">
+      </div>    
+  </div>
+</div>
+
+<!-- not centered and leaves white padding -->
+<section class="section">
+  <div class="container has-text-centered">
+    <figure class="image max-width-image is-centered">
+      <img src="https://bulma.io/images/placeholders/256x256.png" alt="Your Image">
     </figure>
-  </div> -->
+  </div>
+</section>
 
 
-
-<!-- is-half
-is-offset-one-quarter -->
+</div>
 
 </template>
+
+<style scoped>
+.custom_img {
+  width: 100%;
+  height: auto;
+  max-width: 50px;
+
+}
+
+.max-width-image {
+  max-width: 800px; /* Set your desired max-width value */
+  height: auto;
+}
+
+.vertical-align-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Optional: Set a height to center vertically within the viewport */
+}
+
+.content {
+  text-align: center; /* Optional: Center text within the content */
+}
+
+</style>

@@ -37,8 +37,7 @@ export default {
     data() {
         return {
             projects: [
-                {'title': 'TACOS: Template Based Assembly of Comples Structures', 'description': tacos_description, 'href': {"name":"/projects/tacos"} },
-                {'title': 'SPRING: Mapping Monomeric Threading to Protein−Protein Structure Prediction ', 'description':  spring_description, 'href': {"name":"/projects/spring"} },
+                {'title': 'Macromolecular Modeling: Template Based Assembly of Comples Structures', 'description': macromolecular_description, 'href': {"name":"/projects/macromolecular"} },
                 {'title': 'MDM: Full Stack Master Data Management System', 'description': mdm_description, 'href': {"name":"/projects/mdm"} },
                 {'title': 'VuConn: Virtualized User Connections (In Development)', 'description':  vuconn_description, 'href': {"name":"/projects/vuconn"} }
             ]
@@ -46,7 +45,19 @@ export default {
     }
 }
 
-let tacos_description = `
+let macromolecular_description = `
+
+
+The key step of template-based protein−protein structure prediction is the
+recognition of complexes from experimental structure libraries that have similar quaternary
+fold. Maintaining two monomer and dimer structure libraries is however laborious, and
+inappropriate library construction can degrade template recognition coverage. We propose
+a novel strategy SPRING to identify complexes by mapping monomeric threading
+alignments to protein−protein interactions based on the original oligomer images in the
+PDB, which does not rely on library construction and increases the efficiency and quality of
+complex template recognitions
+
+
 I developed one of the first fully automated pipelines for template based quaternary structure prediction 
 starting from sequence. Two critical steps for template based modeling are identifying the correct homologous 
 structures by threading which generates sequence to structure alignments a
@@ -65,20 +76,7 @@ where the spatial restrains collected from both the LOMETS templates and the PDB
 The purpose of the second iteration is to remove the steric clash as well as to refine the global topology of the cluster centroids. 
 The decoys generated in the second simulations are then clustered and the lowest energy structures are selected.
 `
-tacos_description = tacos_description.replace(/\n/g, ' ')
-
-
-let spring_description = `
-The key step of template-based protein−protein structure prediction is the
-recognition of complexes from experimental structure libraries that have similar quaternary
-fold. Maintaining two monomer and dimer structure libraries is however laborious, and
-inappropriate library construction can degrade template recognition coverage. We propose
-a novel strategy SPRING to identify complexes by mapping monomeric threading
-alignments to protein−protein interactions based on the original oligomer images in the
-PDB, which does not rely on library construction and increases the efficiency and quality of
-complex template recognitions
-`
-spring_description = spring_description.replace(/\n/g, ' ')
+macromolecular_description = macromolecular_description.replace(/\n/g, ' ')
 
 let mdm_description = `
 A full-stack framework for Master Data Management (MDM) is a comprehensive solution that streamlines and centralizes the management of critical organizational data, ensuring data accuracy, consistency, and integrity.
