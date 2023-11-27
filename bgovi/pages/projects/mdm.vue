@@ -1,125 +1,95 @@
 <template>
 <div>
 
+<p>Master Data Management</p>
+
+Master Data Management (MDM) is a method of managing an organization's critical data. 
+A Master Data Management system is a comprehensive solution designed to create and maintain a single, 
+consistent, accurate, and complete version of master data across an enterprise. 
+Master data refers to the foundational data shared across an organization, 
+such as customer information, product data, employee records, and more.
+
+Bureacuray driven engineering:
+
+The primary goals of an MDM system are to ensure data consistency, 
+eliminate duplicates, and provide a unified and authoritative source for master data. 
+It involves processes, governance, policies, standards, and tools that help organizations manage and 
+control their master data. MDM systems typically include features like data profiling, data quality management, 
+data integration, and data governance to achieve these objectives.
+
+By implementing a Master Data Management system, organizations can improve data quality, 
+enhance decision-making processes, reduce errors and inefficiencies, comply with regulatory 
+requirements, and gain a unified view of their business-critical information. This centralized and 
+standardized approach to managing master data is essential for businesses operating in complex and 
+dynamic environments, helping them maintain a competitive edge and adapt to changing market conditions.
+
+Main Scope of Problem:
+
+A problem that if only built once would already be solved.
+Merger and acquisitions. Whos the owner whats correct. how to handle
+conflicts. Data changes. Schemas change and usage changes. 
+
+Technical Issues:
+UI users.
+API users.
+ML/AI users.
+Analytics users.
+Database Developers:
+Backup and recovery
+logging
+
+<p>Choice of Database</p>
+  Neo4j or other graph based database
+  JSON or xyz
+  Postgres with Json
+
+  more flexibility with data structure and insert/update/delete speed
+    less query power
+
+<p>Tools</p>
+  UI engine ()
+    subdomain virtulization.
+  API ()
+  JWT ()
+
+<p>As of Query (insert only)</p>
+  https://www.cybertec-postgresql.com/en/implementing-as-of-queries-in-postgresql/
+
+<p>Trigger functions and tracking schemas.</p>
+
+<p>RLS and current settings</p>
+As a function for direct connections.
+Query injection vs where predicate
+
+<p>Direct connections and event triggers</p>
+Controlling what users area allowed to do and how.
+enforcing documentation. 
 
 
+<p>Data Refactoring</p>
 
-<div class='column is-one-quarter'>
-  <div class='card equal-height'>
-    <div class="card-image has-text-centered">
-        <figure class="image is-64x64 is-inline-block">
-              <img src="https://bulma.io/images/placeholders/256x256.png">
-        </figure>
-    </div>
-    <div class='card-content'>
-      <!-- other content here -->
-    </div>
-  </div>
-</div>
+<p>Historical Record and Archive: The timeline merge commit only</p>
+  Forward only. Data reversions vs structure reversions.
+  Adding columns, tables, views and connections (low thought)
+    Data Normalizations
 
+<p>Conditional Crud Operations</p>
 
+<p>Data Staging, Permissions and Notifications</p>
 
+<p>Multistatement CTE: everything is obvious</p>
 
+<p>Query and Storage</p>
 
+<p>Syncing Columnar Store</p>
 
+<p>Schema and api versioning</p>
+  Dependency graph
 
-
-
-
-
-
-<section class="section">
-  <div class="container has-text-centered">
-    <div>
-          <div style ="width: 500px;" class="is-centered">
-
-            <figure class="image is-square is-centered">
-              <img src="https://bulma.io/images/placeholders/256x256.png">
-            </figure>
-          </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-
-<section class="section">
-  <div class="container has-text-centered">
-    <div>
-    <div style="max-width: 500px">
-
-          <figure class="image is-square">
-            <img src="https://bulma.io/images/placeholders/256x256.png">
-          </figure>
-        </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- doesnt work at all -->
-<div class = "container">
-  <div class="level">
-    <div style="max-width: 200px" class="level-item has-text-centered">
-      <figure class="image is-square">
-        <img src="https://bulma.io/images/placeholders/256x256.png">
-      </figure>
-    </div>
-  </div>
-</div>
-  
-
-<!-- centered, resizes and can set width approx. But I dont want it to resize until there is no white space on either side -->
-<div class="columns is-desktop">
-  <div class="column is-half is-offset-one-quarter">
-      <div class="image is-1x1">
-          <img src="https://bulma.io/images/placeholders/256x256.png" alt="Mobile Image">
-      </div>    
-  </div>
-</div>
-
-<!-- not centered and leaves white padding -->
-<section class="section">
-  <div class="container has-text-centered">
-    <figure class="image max-width-image is-centered">
-      <img src="https://bulma.io/images/placeholders/256x256.png" alt="Your Image">
-    </figure>
-  </div>
-</section>
+<p>Conclusion: </p>
+  <p>Quick Depolyments and Rebuilds</p>
 
 
 </div>
 
 </template>
-
-<style scoped>
-.custom_img {
-  width: 100%;
-  height: auto;
-  max-width: 50px;
-
-}
-
-.max-width-image {
-  max-width: 800px; /* Set your desired max-width value */
-  height: auto;
-}
-
-.vertical-align-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Optional: Set a height to center vertically within the viewport */
-}
-
-.content {
-  text-align: center; /* Optional: Center text within the content */
-}
-
-</style>

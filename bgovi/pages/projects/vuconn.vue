@@ -1,24 +1,17 @@
 <template>
 <div>
 
-<h1> TACOS overview image  </h1>
+    <h1> Virtual Database Connections (In Development) </h1>
+
+    <h1> Infrastracture Overview Image</h1>
 
 
-<h1> Pipeline overview </h1>
+    <h1> Goal: </h1>
 
-<h1> Simulation Moves </h1>
+    <h1> History </h1>
 
-
-<h1> Information Score </h1>
-
-
-<h1> Physical Score </h1>
-
-
-<h1> Replica Exchange </h1>
-
-
-<h1> Score Correlation</h1>
+    <h1> Use Cases </h1>
+    
 
 </div>
 </template>
