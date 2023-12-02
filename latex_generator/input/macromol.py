@@ -63,39 +63,38 @@ x = [
             \sum_{bonds} k_b (b - b_0)^2 + \sum_{angles} \theta_k (\theta - \theta_0)^2 + \sum_{vw} \ \epsilon(  (\frac{R_{\text{min},ij}}{r_{ij}})^{12} - (\frac{R_{\text{min},ij}}{r_{ij}})^5 \\\\
             \sum_{Elect} \frac{q_i q_j}{\varepsilon_{\text{r}} r_{ij}} + \sum_{improp} w_k (w - w_0)^2 + \sum_{UB} u_k (u - u_0)^2        
             """
+    },
+    {
+        "name": "amino preference",
+        "latex": 
+            """
+            \\begin{align}
+            E_{\\text{respref}} &= -w \\sum_{i}^{L_{\\text{ch1}}} \\sum_{j}^{L_{\\text{ch2}}} P(A_i, A_j) \\\\
+            P(A_i, A_j) &=
+            \\begin{cases}
+                \\frac{f(A_i, A_j)}{\\sum_{i=1}^{20} f(A_i, A_j)} \\cdot \\frac{t(A)}{\\sum_{i=1}^{20} t(A_i)} & \\text{if } c_{i,j} \\leq 6 \\\\
+                0 & \\text{otherwise}
+            \\end{cases}
+            \\end{align}
+            """
+    },
+    {
+        "name": "orientation",
+        "latex": "E_{\\text{oricontact}} = -w \\sum_{i} \\sum_{j} E_{i,j}(s_{i,j})"
+    },
+    {
+        "name": "dfire",
+        "latex": 
+        """
+            D(i,j,r) =-wln \frac{N_{obs}} {
+
+            \left(\frac{r}{r_{cut}}\right)^\alpha \left(\frac{\Delta r}{\Delta r_{cut}}\right) N_{obs} \left(i,j,r_{cut} \right) 
+
+            }
+        """
+    },
+    {
+        "name": "dist_map",
+        "latex": "E_{\\text{distmap}} = w \\sum_{i} \\sum_{j} (r_{ij} - d_{ij} - \\delta_{ij})"
     }
-
-#statiscital potentials
-# """
-# E_{\text{respref}} = -w \sum_{i}^{Lch1} \sum_{j}^{Lch2}  P(A_i, A_j)
-# """
-
-
-
-# """
-# P(A_i, A_j) =
-# \begin{cases}
-# \frac{  f(A_i, A_j) } {\sum_{i=1}^{20} f(A_i, A_j) }
-#     \cdot \frac{t(A)}{ \sum_{i=1}^{20} t(A_i) } & \text{if } c_{i,j} \leq 6 \\
-    
-#     0 & \text{otherwise}
-# \end{cases}
-
-# """
-
-# #orientation
-# "E_{\text{oricontact}} = -w \sum_{i} \sum_{j} E_{i,j}(s_{i,j})"
-
-# #dfire
-# """
-# D(i,j,r) =-wln \frac{N_{obs}} {
-
-# \left(\frac{r}{r_{cut}}\right)^\alpha \left(\frac{\Delta r}{\Delta r_{cut}}\right) N_{obs} \left(i,j,r_{cut} \right) 
-
-# }
-# """
-
-# #dist map
-# "E_{\text{distmap}} = w \sum_{i} \sum_{j} (r_{ij} - d_{ij} - \delta_{ij})"
-
 ]
