@@ -65,5 +65,37 @@ x = [
             """
     }
 
+#statiscital potentials
+# """
+# E_{\text{respref}} = -w \sum_{i}^{Lch1} \sum_{j}^{Lch2}  P(A_i, A_j)
+# """
+
+
+
+# """
+# P(A_i, A_j) =
+# \begin{cases}
+# \frac{  f(A_i, A_j) } {\sum_{i=1}^{20} f(A_i, A_j) }
+#     \cdot \frac{t(A)}{ \sum_{i=1}^{20} t(A_i) } & \text{if } c_{i,j} \leq 6 \\
+    
+#     0 & \text{otherwise}
+# \end{cases}
+
+# """
+
+# #orientation
+# "E_{\text{oricontact}} = -w \sum_{i} \sum_{j} E_{i,j}(s_{i,j})"
+
+# #dfire
+# """
+# D(i,j,r) =-wln \frac{N_{obs}} {
+
+# \left(\frac{r}{r_{cut}}\right)^\alpha \left(\frac{\Delta r}{\Delta r_{cut}}\right) N_{obs} \left(i,j,r_{cut} \right) 
+
+# }
+# """
+
+# #dist map
+# "E_{\text{distmap}} = w \sum_{i} \sum_{j} (r_{ij} - d_{ij} - \delta_{ij})"
 
 ]
