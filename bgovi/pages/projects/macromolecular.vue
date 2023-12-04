@@ -38,16 +38,16 @@
                 <div v-for="(ix,index2) in image_super" :key="index2">
                     <p class="is-size-5">{{ix.desc}}</p>
                     <div class="has-text-centered">
-                        <figure class="image is-16x9 is-inline-block" :style="{ 'min-width': ix.width + 'px' }">
+                        <figure class="image is-16x9 is-inline-block">
                             <img :src="svg_path+ix['image']" alt="Centered image">
                         </figure>
                     </div>
                 </div>
         </div>
+
     </div>
 </section>
 
-<!-- Equations -->
 <section class="section">
     <div class="container">
     <p class="subtitle"><strong>Physical Score:</strong> {{physical_score.desc}} </p>
@@ -76,9 +76,9 @@ populated states.
     <div class="content">
 
                 <div v-for="(ix,index) in info_score" :key="index">
-                    <p>{{ix.desc}}</p>
+                    <p class="is-size-5"><strong>{{ix.name}}:</strong>  {{ix.desc}}</p>
                     <div class="has-text-centered">
-                        <figure class="image is-16x9 is-inline-block" style="width: 300px">
+                        <figure class="image is-16x9 is-inline-block">
                             <img :src="svg_path+ix['image']" alt="Centered image">
                         </figure>
                     </div>
@@ -265,6 +265,10 @@ terms are the Vander Waals and electrostatic potentials. The last terms refer to
                 }
             ,
             info_score: [
+                {'name': 'orientation', 'image': 'orientation.svg', 'desc': `orientation`},
+                {'name': 'dfire',            'image': 'dfire.svg',    'desc': `dfire`},
+                {'name': 'amino_preference', 'image': 'amino_preference.svg',    'desc': `amino pref`},
+                {'name': 'dist',  'image': 'dist_map.svg', 'desc': `dist`},
 
             ],
             publications: [

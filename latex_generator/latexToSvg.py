@@ -68,7 +68,7 @@ class LatexToSvg:
         pass
         if latex_stmt.strip()[0] == '$':
             latex_template = """
-            \\documentclass[paper=a5,fontsize=12pt]{scrbook}
+            \\documentclass[paper=a5,fontsize=16pt]{scrbook}
             \\usepackage[pdftex,active,tightpage]{preview}
             \\usepackage{amsmath}
             \\usepackage{amssymb}
@@ -91,7 +91,7 @@ class LatexToSvg:
         else:
         # elif 'align' == self.LatexStmtType(latex_stmt):
             latex_template = """
-            \\documentclass[paper=a5,fontsize=12pt]{scrbook}
+            \\documentclass[paper=a5,fontsize=16pt]{scrbook}
             \\usepackage[pdftex,active,tightpage]{preview}
             \\usepackage{amsmath}
             \\usepackage{amssymb}
