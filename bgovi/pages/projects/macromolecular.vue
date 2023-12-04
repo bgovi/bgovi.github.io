@@ -35,11 +35,14 @@
     <div class="container">
     <p class="subtitle"><strong>Image Similarity and Superposition:</strong> </p>
         <div class="content">
-            <div class="has-text-centered">
-                <figure class="image is-16x9 is-inline-block" style="width: 300px">
-                    <img :src="svg_path+image_super[0]['image']" alt="Centered image">
-                </figure>
-            </div>
+                <div v-for="(ix,index2) in image_super" :key="index2">
+                    <p>{{ix.desc}}</p>
+                    <div class="has-text-centered">
+                        <figure class="image is-16x9 is-inline-block" style="width: 300px">
+                            <img :src="svg_path+ix['image']" alt="Centered image">
+                        </figure>
+                    </div>
+                </div>
 
         </div>
     </div>
@@ -175,14 +178,48 @@ export default {
             ],
             image_super: [
                 {
-                'name': "Root Mean Square Deviation", 'image': "rmsd.svg", 'desc': "",
-                'name': "Expanded RMSD", 'image': "rmsd_expanded.svg", 'desc': "",
-                'name': "Max Comp", 'image': "rmsd_expanded.svg", 'desc': "",
-                'name': "Trace", 'image': "rmsd_expanded.svg", 'desc': "",
-                'name': "Cyclic Property", 'image': "rmsd_expanded.svg", 'desc': "",
-                'name': "SVD", 'image': "rmsd_expanded.svg", 'desc': "",
+                'name': "Root Mean Square Deviation", 'image': "rmsd.svg", 'desc': `Similar to protein sequences, protein structures need to be aligned in order to evaluate the
+similarity. Given a superposition, one way is to compare structures is to calculate the root mean
+squared error between a set of points.`
+                },
+                {'name': "Expanded RMSD", 'image': "rmsd_expanded.svg", 'desc': `
+Kabsch derived the solution for finding the optimal solution of y onto x as to minimize the RMSD.
+First the equation is squared and mean squared deviation is used for simplicity and the equation is
+expanded.`
+                },
+                {'name': "Min component", 'image': "maximize.svg", 'desc': `
+Notice that the first summation term is not dependent on U and can be removed from consideration.
+In order to minimize the RMSD we need to maximize.
+                `
+                },
+                {'name': "Trace", 'image': "min_trace.svg", 'desc': `
+Converting the equation into vector notation leads to the equation below with the goal of
+maximizing L.
+                `},
+                {'name': "Cyclic Property", 'image': "cyclic.svg", 'desc': `
+Now using the cyclic property of the transpose the equation can be written as follows where R can
+be calculated and U is unknown.                
+                `},
+                {'name': "SVD", 'image': "svd.svg", 'desc': `
+R is the correlation matrix and using singular value decomposition it can be rewritten as R = V ∗
+S ∗ W T where V and W are orthogonal matricies and S is a diagonal matrix containing the singular
+values. Replacing R with the SVD and using the trace cyclic property
+                `},
+                {'name': "orthoganal", 'image': "maximize.svg", 'desc': `
+The matrices W T ,U,V are replaced with the matrix T, which is the product of orthogonal matrices,
+which leads to` },
+                {'name': "identity", 'image': "identity.svg", 'desc': `
 
-                }
+Since T is orthogonal and T ii <= 1, the trace is maximized when T equals the Identity Matrix.
+The Kabsch algorithm optimal rotation matrices can either be in the right handed coordinate
+system or left handed system (determinant of U equals -1). In order to convert a left handed system
+to right handed the last column of U needs to be multiplied by negative one.
+                `},
+                {'name': "tmscore", 'image': "tmscore.svg", 'desc': `
+Structural scoring systems that can properly identify global structure similarity are important.
+The TMscore was designed to consider the alignment coverage and pairwise distance proximities
+in order to calculate a similarity score.
+                `}
             ],
 
 
