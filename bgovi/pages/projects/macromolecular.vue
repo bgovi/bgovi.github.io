@@ -5,7 +5,7 @@
 <section class="section">
     <div class="container">
     <h1 class="title">Predicting Protein Structure and Interactions</h1>
-    <p class="subtitle"><strong>Prediction Pipeline</strong></p>
+    <p class="subtitle"><strong>Prediction Pipeline:</strong> Starting from a protein sequence how to determine its structure and function?</p>
 
     <div class="content">
             <div class="has-text-centered">
@@ -13,7 +13,6 @@
                 <img src="/img/projects/macromolecular/TacosOverview.png" alt="Centered image">
             </figure>
             </div>
-
     </div>
     </div>
 </section>
@@ -34,12 +33,15 @@
 <!-- Image Similarity and Superimposition -->
 <section class="section">
     <div class="container">
-    <p class="subtitle"><strong>Image Superposition</strong></p>
-    <!-- <div class="content">
-        <ol>
-            <li class="has-text-justified" v-for="(step,index) in steps" :key="index">{{step}}</li>
-        </ol>
-    </div> -->
+    <p class="subtitle"><strong>Image Similarity and Superposition:</strong> </p>
+        <div class="content">
+            <div class="has-text-centered">
+                <figure class="image is-16x9 is-inline-block" style="width: 300px">
+                    <img :src="svg_path+image_super[0]['image']" alt="Centered image">
+                </figure>
+            </div>
+
+        </div>
     </div>
 </section>
 
@@ -151,26 +153,42 @@
 
 <script>
 
+// const svg_path = "/img/projects/macromolecular/svg/"
+
 export default {
 
     data () {
         return {
+            svg_path: "/img/projects/macromolecular/svg/",
             steps: [
-                "Dynamic assembly of equation parameters based on avaialbe information. A series of equations are predetermined \
+                "The sequence is searched through a series of protein related database to find related sequences with known properties related to structure and function.",
+                "Dynamic assembly of equation parameters based on availabe information. A series of equations are predetermined \
                 based on feature analysis. The linear combination of terms are determined from identified similarities in the Protein database.",
-                "Initial Image randomly generation based on sequence prompt. The less sequence information available the \
+                "The initial image is randomly generation based on sequence the prompt and identified information. The less sequence information available the \
                 further the guess is from the correct solution.",
                 "Starting from the initial images random distorations are added to the image. The image improvement are guided by \
                     an equation. After so many iterations the process is stopped and the current image is saved.",
                 "Step 2 and 3 are repeated several thousand times.",
                 "The best answer is determined by which image minimizes the equation.",
-                "Local features of the highest rank image nearest neighbors are integrated into the model by superimposing \
+                "Local features from the neighborhood of the highest rank image are integrated into the model by superimposing \
                 based on consensus image features and averaging together."
             ],
+            image_super: [
+                {
+                'name': "Root Mean Square Deviation", 'image': "rmsd.svg", 'desc': "",
+                'name': "Expanded RMSD", 'image': "rmsd_expanded.svg", 'desc': "",
+                'name': "Max Comp", 'image': "rmsd_expanded.svg", 'desc': "",
+                'name': "Trace", 'image': "rmsd_expanded.svg", 'desc': "",
+                'name': "Cyclic Property", 'image': "rmsd_expanded.svg", 'desc': "",
+                'name': "SVD", 'image': "rmsd_expanded.svg", 'desc': "",
+
+                }
+            ],
+
 
             energy_score: [
                 {
-                'name': "", 'image': "", 'desc': ""
+                'name': "Physical Potential", 'image': "", 'desc': ""
                 }
             ],
             publications: [
