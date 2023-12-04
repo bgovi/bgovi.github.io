@@ -32,7 +32,16 @@
 </section>
 
 <!-- Image Similarity and Superimposition -->
-
+<section class="section">
+    <div class="container">
+    <p class="subtitle"><strong>Image Superposition</strong></p>
+    <!-- <div class="content">
+        <ol>
+            <li class="has-text-justified" v-for="(step,index) in steps" :key="index">{{step}}</li>
+        </ol>
+    </div> -->
+    </div>
+</section>
 
 <!-- Equations -->
 <section class="section">
@@ -111,6 +120,29 @@
     </div>
 </section>
 
+
+<!-- Conclusion -->
+<section class="section">
+    <div class="container">
+    <p class="subtitle"><strong>Conclusion</strong></p>
+
+    <div class="content">
+
+    </div>
+    </div>
+</section>
+
+
+<!-- Articles and Publications -->
+<section class="section">
+    <div class="container">
+    <p class="subtitle"><strong>Articles and Publications</strong></p>
+
+    <div class="content">
+
+    </div>
+    </div>
+</section>
 
 
 
