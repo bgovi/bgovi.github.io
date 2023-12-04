@@ -24,7 +24,7 @@
     <p class="subtitle"><strong>Pipeline Steps</strong></p>
     <div class="content">
         <ol>
-            <li class="has-text-justified" v-for="(step,index) in steps" :key="index">{{step}}</li>
+            <li class="has-text-justified is-size-5" v-for="(step,index) in steps" :key="index">{{step}}</li>
         </ol>
     </div>
     </div>
@@ -36,7 +36,7 @@
     <p class="subtitle"><strong>Image Similarity and Superposition:</strong> </p>
         <div class="content">
                 <div v-for="(ix,index2) in image_super" :key="index2">
-                    <p>{{ix.desc}}</p>
+                    <p class="is-size-5">{{ix.desc}}</p>
                     <div class="has-text-centered">
                         <figure class="image is-16x9 is-inline-block" :style="{ 'min-width': ix.width + 'px' }">
                             <img :src="svg_path+ix['image']" alt="Centered image">
@@ -265,7 +265,7 @@ terms are the Vander Waals and electrostatic potentials. The last terms refer to
                 }
             ,
             info_score: [
-                
+
             ],
             publications: [
                 "",
