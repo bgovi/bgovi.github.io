@@ -19,7 +19,7 @@
 
 
 <!-- Pipeline Steps -->
-<section class="section">
+<section class="section" style="padding-bottom: 10px">
     <div class="container">
     <p class="subtitle"><strong>Pipeline Steps</strong></p>
     <div class="content">
@@ -31,7 +31,7 @@
 </section>
 
 <!-- Image Similarity and Superimposition -->
-<section class="section">
+<section class="section" style="padding-bottom: 10px">
     <div class="container">
     <p class="subtitle"><strong>Image Similarity and Superposition:</strong> </p>
         <div class="content">
@@ -48,7 +48,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" style="padding-bottom: 10px">
     <div class="container">
     <p class="subtitle"><strong>Physical Score:</strong> {{physical_score.desc}} </p>
     <div class="content">
@@ -62,7 +62,7 @@
     </div>
 </section>
 
-<section class="section">
+<section class="section" style="padding-bottom: 10px">
     <div class="container">
     <p class="subtitle"><strong>Statistical Energy Scores and Information Based Restraints:</strong> 
 Information from the PDB can improve the modeling and prediction of protein structure. These
@@ -91,9 +91,11 @@ populated states.
 
 
 <!-- Predicted Models -->
-<section class="section">
+<section class="section" style="padding-bottom: 10px">
     <div class="container">
-    <p class="subtitle"><strong>Correlation to Ground Truth</strong></p>
+    <p class="subtitle"><strong>Correlation to Ground Truth:</strong> To partly assess the quality of our force field, the Pearson’s correlation coefficient was calculated
+between the energy and the TM-score of decoys to the structure of the native complex. The
+correlation can have variation depending on the quality of the complex and monomeric templates.</p>
 
     <div class="content">
             <div class="has-text-centered">
@@ -109,9 +111,11 @@ populated states.
 
 
 <!-- Predicted Models -->
-<section class="section">
+<section class="section" style="padding-bottom: 10px">
     <div class="container">
-    <p class="subtitle"><strong>Predicted Models</strong></p>
+    <p class="subtitle"><strong>Predicted Models:</strong> Near-native models built by TACOS. Plot showing examples of TACOS modeling for both homo- and
+heterodimers. The predicted models are shown in red and slate for chain A and B; the native structure shown as a black line 
+is superimposed onto the model structure.</p>
 
     <div class="content">
             <div class="has-text-centered">
@@ -125,9 +129,14 @@ populated states.
 
 
 <!-- Predicted Models -->
-<section class="section">
+<section class="section" style="padding-bottom: 10px">
     <div class="container">
-    <p class="subtitle"><strong>Predicting Interaction Networks</strong></p>
+    <p class="subtitle"><strong>Predicting Interaction Networks:</strong> The entire E. coli genome was modelled by the structure prediction pipelines I-TASSER and
+QUARK. Using SPRING 46,033 dimer complexes were predicted in the E. coli. Using the
+pregenerated data from I-TASSER, TACOS can be used to refine and assemble
+the predicted protein dimeric interactions. The models from I-TASSER and QUARK can be used
+in the initial stage of dimer threading to identify distant homology complexes and improve
+recognition of conserved binding residues at the interface.</p>
 
     <div class="content">
             <div class="has-text-centered">
@@ -141,9 +150,14 @@ populated states.
 
 
 <!-- Predicted Models -->
-<section class="section">
+<section class="section" style="padding-bottom: 10px">
     <div class="container">
-    <p class="subtitle"><strong>Interaction Network Superposition</strong></p>
+    <p class="subtitle"><strong>Interaction Network Superposition:</strong> SPRING is a template-base algorithm for protein-protein complex 
+    structure prediction. The pipeline first threads one chain of the protein complex through the PDB library with the binding parters 
+    retrieved from the original oligomer entries. The complex models for the query are then deduced from the template binding partner 
+    associations through a pre-calculated look-up table. The model of the best orientation is finally selected by the SPRING-score that is a 
+    combination of threading Z-score, interface contacts, 
+    and TM-align match between monomer-to-dimer templates. The final goal was to build full atom models using TACOS as a final refinement step.</p>
 
     <div class="content">
             <div class="has-text-centered">
@@ -157,9 +171,10 @@ populated states.
 
 
 <!-- Conclusion -->
-<section class="section">
+<section class="section" style="padding-bottom: 10px">
     <div class="container">
-    <p class="subtitle"><strong>Conclusion</strong></p>
+    <p class="subtitle"><strong>Conclusion:</strong> The general approach to predict macromolecular structures has been significantly starting in 2016. 
+    Now deep learning is used to create to energy function to guide the simulations.</p>
 
     <div class="content">
 
@@ -174,7 +189,9 @@ populated states.
     <p class="subtitle"><strong>Articles and Publications</strong></p>
 
     <div class="content">
-
+        <ol>
+            <li class="has-text-justified is-size-5" v-for="(pub,index) in publications" :key="index">{{pub}}</li>
+        </ol>
     </div>
     </div>
 </section>
@@ -265,52 +282,31 @@ terms are the Vander Waals and electrostatic potentials. The last terms refer to
                 }
             ,
             info_score: [
-                {'name': 'orientation', 'image': 'orientation.svg', 'desc': `orientation`},
-                {'name': 'dfire',            'image': 'dfire.svg',    'desc': `dfire`},
-                {'name': 'amino_preference', 'image': 'amino_preference.svg',    'desc': `amino pref`},
-                {'name': 'dist',  'image': 'dist_map.svg', 'desc': `dist`},
+                {'name': 'Orientation', 'image': 'orientation.svg', 'desc': `
+ For any residue i and j in opposite chains which are in contact, the orientation of the
+unit bisector vectors of i and j can be in three different orientations as defined by their dot product:
+parallel, anti-parallel or perpendicular. e(A i , A j , γ i,j ) is the probability of an amino acid pair to be in the
+orientation γ i,j
+                `},
+                {'name': 'DFIRE',            'image': 'dfire.svg',    'desc': `Probability of an amino acid being in an local environment of other amino acids`},
+                {'name': 'Pairwise Amino Preference', 'image': 'amino_preference.svg',    'desc': `
+ Frequence of a pair of amino acids being in close contact. `},
+                {'name': 'Distance Restraints',  'image': 'dist_map.svg', 'desc': `Distance restraints obtained from global and local images.`},
 
             ],
             publications: [
-                "",
+                "Zhang, W., Yang, J., He, B., Walker, S.E., Zhang, H., Govindarajoo, B., Virtanen, J., Xue, Z., Shen, H.B. and Zhang, Y., 2016. Integration of QUARK and I‐TASSER for ab initio protein structure prediction in CASP11. Proteins: Structure, Function, and Bioinformatics, 84, pp.76-86.",
+                "Guerler, A., Govindarajoo, B. and Zhang, Y., 2013. Mapping monomeric threading to protein–protein structure prediction. Journal of chemical information and modeling, 53(3), pp.717-725.",
+                "Xu, T., Park, S.S., Giaimo, B.D., Hall, D., Ferrante, F., Ho, D.M., Hori, K., Anhezini, L., Ertl, I., Bartkuhn, M. and Zhang, H., 2017. RBPJ/CBF 1 interacts with L3 MBTL 3/MBT 1 to promote repression of Notch signaling via histone demethylase KDM 1A/LSD 1. The EMBO journal, 36(21), pp.3232-3249.",
+                "Yang, J., Zhang, W., He, B., Walker, S.E., Zhang, H., Govindarajoo, B., Virtanen, J., Xue, Z., Shen, H.B. and Zhang, Y., 2016. Template‐based protein structure prediction in CASP11 and retrospect of I‐TASSER in the last decade. Proteins: Structure, Function, and Bioinformatics, 84, pp.233-246.",
+                "Li, H.D., Menon, R., Govindarajoo, B., Panwar, B., Zhang, Y., Omenn, G.S. and Guan, Y., 2015. Functional networks of highest-connected splice isoforms: from the chromosome 17 human proteome project. Journal of proteome research, 14(9), pp.3484-3491.",
+                "Xue, Z., Jang, R., Govindarajoo, B., Huang, Y. and Wang, Y., 2015. Extending protein domain boundary predictors to detect discontinuous domains. PLoS One, 10(10), p.e0141541.",
+                "Govindarajoo, B., 2016. Template Based Modeling and Structural Refinement of Protein-Protein Interactions (Doctoral dissertation)."
             ]
         }
     }
 
 }
-
-// <h1> Discuss image overview</h1>
-
-
-
-// 1 and 2.) Initial Image Generation and Energy Scores
-//     The Protein Data Bank and Limited Protein Folds
-//     Identifying Similarities amongst Proteins Sequences
-//     Structure Alignment and Structure Similarity Scores
-
-//         superposition
-//         mapping features
-
-// Energy Scores
-//     Sequence Alignment
-//     Image Superposition and Profile determination
-//     Physical Restraints
-//     Information Correlation
-
-// 3.) Monte Carlo Simulations: Random Pertubation of image
-
-// 4. and 5.) Decoy Recognition
-
-// Predicted Structures: Description of meaning.
-
-// Genomics Level Scaling: (Predicting Interaction Networks)
-//     Network Image
-
-//     Spring
-
-//     Quick Refinement
-
-// Publications and Articles
 
 
 </script>
