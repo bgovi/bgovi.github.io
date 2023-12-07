@@ -37,8 +37,8 @@ export default {
     data() {
         return {
             projects: [
-                {'title': 'Macromolecular Modeling: Template Based Assembly of Comples Structures', 'description': macromolecular_description, 'href': {"name":"/projects/macromolecular"} },
-                {'title': 'MDM: Full Stack Master Data Management System', 'description': mdm_description, 'href': {"name":"/projects/mdm"} },
+                {'title': 'Macromolecular Modeling: Template Based Assembly of Complex Structures', 'description': macromolecular_description, 'href': {"name":"/projects/macromolecular"} },
+                // {'title': 'MDM: Full Stack Master Data Management System', 'description': mdm_description, 'href': {"name":"/projects/mdm"} },
                 {'title': 'VuConn: Virtualized User Connections (In Development)', 'description':  vuconn_description, 'href': {"name":"/projects/vuconn"} }
             ]
         }
@@ -46,35 +46,9 @@ export default {
 }
 
 let macromolecular_description = `
-
-
-The key step of template-based protein−protein structure prediction is the
-recognition of complexes from experimental structure libraries that have similar quaternary
-fold. Maintaining two monomer and dimer structure libraries is however laborious, and
-inappropriate library construction can degrade template recognition coverage. We propose
-a novel strategy SPRING to identify complexes by mapping monomeric threading
-alignments to protein−protein interactions based on the original oligomer images in the
-PDB, which does not rely on library construction and increases the efficiency and quality of
-complex template recognitions
-
-
 I developed one of the first fully automated pipelines for template based quaternary structure prediction 
-starting from sequence. Two critical steps for template based modeling are identifying the correct homologous 
-structures by threading which generates sequence to structure alignments a
-
-the continuous fragments excised from the PDB templates are reassembled into full-length models 
-by replica-exchange Monte Carlo simulations with the threading unaligned regions (mainly loops) built by ab initio modeling.
-
-
-and refining the initial threading template 
-coordinates closer to the native conformation.
-
-TACOS, was created. The pipeline combines threading templates and domain knowledge from the PDB into a knowledge based energy score. 
+starting from sequence. The pipeline combines threading templates and domain knowledge from the PDB into a knowledge based energy score. 
 The energy score is integrated into a Monte Carlo sampling simulation that drives the initial template closer to the native topology.
-In the third step, the fragment assembly simulation is performed again starting from the SPICKER cluster centroids, 
-where the spatial restrains collected from both the LOMETS templates and the PDB structures by TM-align are used to guide the simulations. 
-The purpose of the second iteration is to remove the steric clash as well as to refine the global topology of the cluster centroids. 
-The decoys generated in the second simulations are then clustered and the lowest energy structures are selected.
 `
 macromolecular_description = macromolecular_description.replace(/\n/g, ' ')
 
@@ -87,12 +61,10 @@ Efficiency and Automation: Automation of data processes reduces manual errors, a
 mdm_description = mdm_description.replace(/\n/g, ' ')
 
 let vuconn_description = `
-In summary, a virtual connection to a database is a critical link that enables an application to interact with a database management system. It allows the application to perform various database operations while ensuring security, reliability, and efficient resource usage.
-Properly managing these connections is essential for the smooth operation of applications that rely on databases for data storage and retrieval.
-
-It's essential to secure the virtual connection to the database to prevent unauthorized access and data breaches. This involves using secure authentication methods, encryption, and access control mechanisms
-
-In many applications, connection pooling is used to efficiently manage virtual database connections. Connection pooling allows multiple instances of the application to share a limited number of connections, reducing the overhead of opening and closing connections repeatedly.
+The proposed virtual connection is expected to be a critical link that enables an application to interact with a database management system. 
+The virtual connections has all the security, reliability, and efficient resource usage of a direct connection while allowing feature extensions generally
+not available in data servers. The virtual connections provide improved preformance and capabilities in regards to authentication methods, 
+resouce allocation, user management, encryption, and access control mechanisms.
 `
 vuconn_description = vuconn_description.replace(/\n/g, ' ')
 
