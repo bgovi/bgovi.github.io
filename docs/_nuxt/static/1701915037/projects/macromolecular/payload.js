@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/macromolecular", {data:[{}],fetch:{},mutations:void 0});
