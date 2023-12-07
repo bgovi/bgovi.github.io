@@ -57,9 +57,9 @@ domain knowledge to understand protein structure, function and dynamics.
 <p class="has-text-justified">
 <strong> Alpha Fold and Career Adjustments: </strong>
 Nearing the end of my dissertation, the full capabilities of neural networks started to become apparent. The underlying algorithms were
-approachable, but the cost to run them not so much. It still surprises me that the cost of my simulations approximately a couple dollars were
+approachable, but the cost to run them not so much. It still surprises me that the cost of my simulations were approximately a couple dollars were
 as Googles Deep Mind was spending 250K to a few million per simulation. Since the takeover, I have been spending time working to diversify my skills, 
-and find ways to harness the newly generated models and technologies in an affordable manner.
+and finding approaches to harness the newly generated models and technologies in an affordable manner.
 </p>
 
 <br>
@@ -72,7 +72,7 @@ enjoying the workplace culture and my interaction with team members, and being a
 <br>
 <div class="content">
     <h4 class="has-text-centered">Technical/Specialized Interests</h4>
-      <div class="columns" v-for="i in range(0, 12, 3)" :key="i">
+      <div class="columns column-mobile-padding" v-for="i in range(0, 12, 3)" :key="i">
                 <div class="column is-one-third content is-normal" style="margin: 0px; padding: 0px;">
                     <ul> <li>{{fields[i]}}</li> </ul>
                 </div>
@@ -138,3 +138,15 @@ export default {
 
 
 </script>
+
+<style scoped>
+
+
+@media screen and (max-width: 768px) {
+  .column-mobile-padding {
+    margin-bottom: 30px;
+  }
+}
+
+
+</style>
