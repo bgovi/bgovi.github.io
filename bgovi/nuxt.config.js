@@ -54,7 +54,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxt-leaflet'
+    'nuxt-leaflet',
+    ['nuxt-highlightjs', {'style': 'atom-one-dark'} ]
   ],
   /*
   ** Axios module configuration
