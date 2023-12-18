@@ -1,7 +1,7 @@
 <template>
     
-    <pre>
-        <code v-highlight class="javascript" >console.log('Hello World')</code>
+    <pre style="background: white;" >
+        <code v-highlight class="javascript">console.log('Hello World')</code>
     </pre>
 
 </template>
