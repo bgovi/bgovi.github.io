@@ -38,7 +38,7 @@ export default {
         return {
             projects: [
                 {'title': 'Macromolecular Modeling: Template Based Assembly of Complex Structures', 'description': macromolecular_description, 'href': {"name":"/projects/macromolecular"} },
-                // {'title': 'MDM: Full Stack Master Data Management System', 'description': mdm_description, 'href': {"name":"/projects/mdm"} },
+                {'title': 'Master Data Management for cFTEs: Full Stack Master Data Management System', 'description': mdm_description, 'href': {"name":"/projects/mdm"} },
                 {'title': 'VuConn: Virtualized User Connections (In Development)', 'description':  vuconn_description, 'href': {"name":"/projects/vuconn"} }
             ]
         }
@@ -54,9 +54,8 @@ macromolecular_description = macromolecular_description.replace(/\n/g, ' ')
 
 let mdm_description = `
 A full-stack framework for Master Data Management (MDM) is a comprehensive solution that streamlines and centralizes the management of critical organizational data, ensuring data accuracy, consistency, and integrity.
-This framework encompasses both front-end and back-end components, offering a holistic approach to MDM.
-
-Efficiency and Automation: Automation of data processes reduces manual errors, accelerates data processing, and improves productivity.
+This framework encompasses both front-end and back-end components, offering a holistic approach to MDM. This process was primarily built to
+manage provider clinical full time effort (cFTE). MDM for cFTEs requires a full stack framework that can be changed, updated, and reverted efficiently.
 `
 mdm_description = mdm_description.replace(/\n/g, ' ')
 

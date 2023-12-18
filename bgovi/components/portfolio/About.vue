@@ -33,7 +33,7 @@ Also, math is hard and I'm constantly trying to get better at it and incorporate
 
 
 
-<br>
+<!-- <br>
 <p class="has-text-justified"> 
 <strong> Short Bio: </strong> My professional and academic interest began junior year at Indiana University Bloomington when I took biochemistry.
 Biochemistry provided me with a conceptual understanding of biology using organic chemistry and thermodynamics.
@@ -60,7 +60,7 @@ Nearing the end of my dissertation, the full capabilities of neural networks sta
 approachable, but the cost to run them not so much. It still surprises me that the cost of my simulations were approximately a couple dollars were
 as Googles Deep Mind was spending 250K to a few million per simulation. Since the takeover, I have been spending time working to diversify my skills, 
 and finding approaches to harness the newly generated models and technologies in an affordable manner.
-</p>
+</p> -->
 
 <br>
 <p class="has-text-justified">

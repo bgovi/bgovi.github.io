@@ -4,47 +4,37 @@
 <section class="section" style="padding-bottom: 24px">
     <div class="container">
     <h1 class="title">Master Data Management (cFTE)</h1>
-
-
-
     </div>
 </section>
 
-
-
-<section class="section" style="padding-top: 0px">
+<section class="section" style="padding-top: 0px;">
     <div class="container">
     <div class="content">
       <p class="subtitle"><strong>Main Scope of Problem</strong></p>
 
       <p>
 
-      Column Security, row security and cell security.
-
-      Managing dynamic many to many relationships
-
-
-
-
-      Temporal and location based responsibilities.
-
-      Data owners at the cell element intersections of columns and rows.
-
       Master Data Management (MDM) is a method of managing an organization's critical data. 
       A Master Data Management system is a comprehensive solution designed to create and maintain a single, 
       consistent, accurate, and complete version of master data across an enterprise.
 
+      Process driven workflows
 
-      Integration with Active Directory
+      Column Security, row security and cell security.
+
+      Managing dynamic many to many relationships
+
+      Temporal and location based responsibilities. 
+              Integration with Active Directory
+
+      Data owners at the cell element intersections of columns and rows.
+
 
       Technical Issues:
       UI users.
       API users.
-      ML/AI users.
       Analytics users.
-      Database Developers:
-      Backup and recovery
-      logging
+      Backup and recovery.       Historical record
 
 
       </p>
@@ -55,7 +45,7 @@
     </div>
 </section>
 
-<section class="section" style="padding-top: 0px">
+<section class="section" style="padding-top: 0px; padding-bottom: 0px;">
     <div class="container">
     <h1 class="subtitle"><strong>cFTE Definitions</strong></h1>
 
@@ -63,15 +53,25 @@
       dedicates to clinical activities. It implies that the individual is engaged in clinical work on a full-time basis, which may 
       include patient care, consultations, procedures, and other clinical responsibilities. The specific definition can vary depending on 
       institutional or contractual agreements.
-
       cFTE is a positivie number that ranges between 0 and 1. There can be hundreds of definitions. Each indepedently assigned to a provider
-      at different points in time. The
+      at different points in time. Below are example calculations and their corresponding definitions.
+      <br>
 
+<br>
 
-cFTE = TotalFTE - (Academic_FTE + Research_FTE + Administrative FTE)
-cFTE = clinical_effort/total_effort
-cFTE = (max_sessions*assigned_sesseions + max_shifts*assigned_shifts)/(max_sessions + max_shifts)
+    <div class="content">
 
+      <p><strong>Definitions</strong></p>
+      <ol>
+        <li v-for="(cfte_def, index) in cfte_defs" :key="index"> {{ cfte_def.eqn }}</li>
+      </ol>
+
+      <p><strong>Description</strong></p>
+      <ol>
+        <li v-for="(cfte_def, index) in cfte_defs" :key="index"> {{ cfte_def.desc }}</li>
+      </ol>
+
+    </div>
 
 
     </div>
@@ -90,6 +90,22 @@ cFTE = (max_sessions*assigned_sesseions + max_shifts*assigned_shifts)/(max_sessi
       department_employees:
       cfte_definitions:
       provider_effort
+
+
+users: oauth_id (Managed by active directory)
+  id, first_name, last_name, oauth_id, npi, employee_number, is_provider, is_manager, meta_data, valid, last_modified_by
+
+departments
+  id, name, valid, last_modified_by
+
+department_employees
+  id, user_id, department_id, start_date, end_date, valid, last_modified_by
+
+cfte_definitions
+  id, name, description, terms, valid, last_modified_by
+
+provider_effort
+  provider_id, effective_date, cfte_definition_id, valid, last_modified_by
     </p>
 
     <div class="content">
@@ -110,9 +126,18 @@ cFTE = (max_sessions*assigned_sesseions + max_shifts*assigned_shifts)/(max_sessi
       <p >
         UI engine ()
         API ()
-        component extensions, sql extensiosn. off by 1 scenarios
+        component extensions, sql extensiosn. off by 1 scenarios.
+        the cfte_definitions.definition stores a json file that maintains what is collected through
+        apis and xyz.
       </p>
   </div>
+
+
+    <!-- json -->
+    <pre style="background: white;" >
+        <code v-highlight class="json atom-one-dark">{{jsonx}}</code>
+    </pre>
+
 
     <div class="content">
             <div class="has-text-centered">
@@ -121,6 +146,8 @@ cFTE = (max_sessions*assigned_sesseions + max_shifts*assigned_shifts)/(max_sessi
             </figure>
             </div>
     </div>
+
+
 
 
 
@@ -134,9 +161,9 @@ cFTE = (max_sessions*assigned_sesseions + max_shifts*assigned_shifts)/(max_sessi
     <div class="content">
       <p class="subtitle"><strong>Time Travel, Row Level Security and Dynamic views</strong></p>
       <p>
-JWT
-As a function for direct connections.
-Query injection vs where predicate
+        JWT
+        As a function for direct connections.
+        Query injection vs where predicate
         JWT ()
       </p>
 
@@ -191,6 +218,9 @@ Query injection vs where predicate
       <p class="subtitle"><strong>Conclusion</strong></p>
       <p>
         Details pending
+    changing rules and schema versioning
+    can manage own data or others can
+
 
       </p>
 
@@ -211,12 +241,17 @@ export default {
       jc: "console.log('Hello World sup')",
       // table: table,
       cfte_defs: [
-        {'eqn': 'cFTE = TotalFTE - (Academic_FTE + Research_FTE + Administrative_FTE)', 'desc': '', 'name': 'One Minus'},
-        {'eqn': 'clinical_effort/total_effort', 'desc': '', 'name': 'Fractional'},
-        {'eqn': 'cFTE = (max_sessions*assigned_sesseions + max_shifts*assigned_shifts)/(max_sessions + max_shifts)', 'desc': '', 'name': 'Shift and Sessions'},
-
-
+        {'eqn': 'cFTE = Total_FTE - (Academic_FTE + Research_FTE + Administrative_FTE)', 
+          'desc': 'The total effort is subtracted from the sum of sub appointment values. All parameters must be between 0 and 1', 'name': 'One Minus'},
+        {'eqn': 'cFTE = clinical_effort/total_effort', 'desc': 'Fraction of hours assigned for clinical work divided by the providers total appointment', 
+        'name': 'Fractional'},
+        {'eqn': 'cFTE = (hrs_per_session*assigned_sessions + hrs_per_shift*assigned_shifts)/(hrs_per_session*max_sessions + hrs_per_shift*max_shifts)', 
+          'desc': 'Shifts and sessions are nomenclature for a full and half days worth of work. Each shift and session is assigned a duration. The cfte is calculated as fraction of hours worked based on appointed shifts and sessions'
+          ,'name': 'Shift and Sessions'},
       ],
+      jsonx: jsonx,
+
+
       pe_table: pe_table,
       current_effort: current_effort_view,
       as_of_effort: as_of_effort,
@@ -228,7 +263,14 @@ export default {
 
 }
 
-
+const jsonx =
+`[
+  {field: 'name',  type: 'string'},
+  {field: 'sport', type: 'json'  }, 
+  {field: 'date',  type: 'date'  },
+  {field: 'wins',  type: 'int'   }
+]
+`
 
 
 // https://www.cybertec-postgresql.com/en/implementing-as-of-queries-in-postgresql/
@@ -309,12 +351,15 @@ BEGIN
  
     IF TG_OP IN ('INSERT', 'UPDATE')
     THEN
-        INSERT INTO provider_effort (id, valid, provider_id, effective_date, effort)
+        INSERT INTO provider_effort (id, valid, user_id, effective_date, cfte_def_id, cfte, last_modified_by)
             VALUES (NEW.id,
                 tstzrange(current_timestamp, TIMESTAMPTZ 'infinity'),
-                NEW.provider_id,
+                NEW.user_id,
                 NEW.effective_date,
-                NEW.effort);
+                NEW.cfte_def_id,
+                NEW.cfte,
+                NEW.last_modified_by
+                );
  
         RETURN NEW;
     END IF;
