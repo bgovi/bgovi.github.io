@@ -78,7 +78,13 @@
     <h1 class="subtitle"><strong>Data Schema Structure</strong></h1>
 
     <p style="padding-bottom: 24px">
-      Below is an example structure of 
+      Below is an example structure of the schema used to managed provider cfte data. The users table maintains information of the organizations staff. Users
+      can be providers, managers and/or other employees of the company. Each user belongs to one or more departments. The time that a user is employed by a 
+      department are stored in the start and end dates. A manager can maintain a providers cfte information based on if the provider is managed by the user 
+      based on departamental and employment overlap. Each user can modify their own cfte data. Each record change for each table is stored indefinitely.
+      The time the record was created/modified and the endpoint of activity is stored in each tables valid column. Managers are generally responsible for
+      the provider_effort and cfte_definitions table. Everything else is managed by the systems active directory. The person who last changed the record is
+      stored in the last_modified_by column.
     </p>
 
     <div class="content">
@@ -89,33 +95,6 @@
             </div>
     </div>
 
-
-    <p style="padding-bottom: 24px">
-      users:
-      departments:
-      department_employees:
-      cfte_definitions:
-      provider_effort
-
-
-users: oauth_id (Managed by active directory)
-  id, first_name, last_name, oauth_id, npi, employee_number, is_provider, is_manager, meta_data, valid, last_modified_by
-
-departments
-  id, name, valid, last_modified_by
-
-department_employees
-  id, user_id, department_id, start_date, end_date, valid, last_modified_by
-
-cfte_definitions
-  id, name, description, terms, valid, last_modified_by
-
-provider_effort
-  provider_id, effective_date, cfte_definition_id, valid, last_modified_by
-    </p>
-
-
-
     </div>
 </section>
 
@@ -124,11 +103,10 @@ provider_effort
     <div class="content">
       <p class="subtitle"><strong>Fast Apps</strong></p>
       <p >
-        UI engine ()
-        API ()
-        component extensions, sql extensiosn. off by 1 scenarios.
-        the cfte_definitions.definition stores a json file that maintains what is collected through
-        apis and xyz.
+        The user interfaces for data collection are powered by AgGrid. The table and data entry structure for a given cfte rule is stored in the 
+        cfte_definitions.definition column. This column is a json configuration that defines the cfte and user interface rules. AgGrid allows for
+        custom data components to be created for more complicated use cases. The important note is that any created cfte rule will automatically map
+        to a UI display and API endpoint. Below is an example json configuration and how the entry form would be displayed by the end user.
       </p>
   </div>
 
@@ -240,11 +218,11 @@ export default {
     return {
       jc: "console.log('Hello World sup')",
       tech_reqs: [
-        'UI users.',
-        'API users.',
-        'Analytics users.',
-        'Dynamic permissions',
-        'Backup and recovery.       Historical record'
+        'User Interface: Quickly generate interfaces that are personalized to each users requirements.',
+        'API: Generate API endpoints for automated and coding based interfaces',
+        'Analytics: Provide personalized views for analytic systems such as PowerBI or Tableau.',
+        'Dynamic Permissions: Quickly enable and change user permissions on any set of given rules.',
+        'Historical Record: Backup and recovery of data as well as seeing time based snap shots'
       ],
 
 
