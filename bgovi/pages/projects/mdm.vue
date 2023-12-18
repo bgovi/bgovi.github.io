@@ -16,28 +16,17 @@
 
       Master Data Management (MDM) is a method of managing an organization's critical data. 
       A Master Data Management system is a comprehensive solution designed to create and maintain a single, 
-      consistent, accurate, and complete version of master data across an enterprise.
-
-      Process driven workflows
-
-      Column Security, row security and cell security.
-
-      Managing dynamic many to many relationships
-
-      Temporal and location based responsibilities. 
-              Integration with Active Directory
-
-      Data owners at the cell element intersections of columns and rows.
-
-
-      Technical Issues:
-      UI users.
-      API users.
-      Analytics users.
-      Backup and recovery.       Historical record
-
+      consistent, accurate, and complete version of master data across an organization. Government and healthcare institutions provide
+      a unique challenge for MDM systems as their workflows are often process driven based on current affairs. Correctly managing their data requires
+      dynamic full stack frameworks that can quickly manage and implement complex workflows. These workflows can have user entry and visualization requirements based on
+      time, location, employment and other fluid relationships.
 
       </p>
+
+      <p><strong>Technical Requirements</strong></p>
+      <ol>
+        <li v-for="(tx, index) in tech_reqs" :key="index"> {{ tx }}</li>
+      </ol>
 
 
 
@@ -48,16 +37,20 @@
 <section class="section" style="padding-top: 0px; padding-bottom: 0px;">
     <div class="container">
     <h1 class="subtitle"><strong>cFTE Definitions</strong></h1>
-
-      Clinical full-time effort typically refers to the amount of time a healthcare professional, such as a physician or researcher, 
+      Clinical full-time effort (cFTE) typically refers to the amount of time a healthcare professional, such as a physician or researcher, 
       dedicates to clinical activities. It implies that the individual is engaged in clinical work on a full-time basis, which may 
       include patient care, consultations, procedures, and other clinical responsibilities. The specific definition can vary depending on 
       institutional or contractual agreements.
-      cFTE is a positivie number that ranges between 0 and 1. There can be hundreds of definitions. Each indepedently assigned to a provider
-      at different points in time. Below are example calculations and their corresponding definitions.
       <br>
-
-<br>
+      <br>
+      A current data management issue in healthcare that rquires MDM like features is how to best maintain and update cFTEs.
+      cFTEs are not strictly defined and there can be hundreds of definitions within an organizaiton. Each definition can be indepedently 
+      assigned to a provider at different points in time. The individuals responsible for maintaining a given providers cFTE changes daily. 
+      The cFTE system requires rules that can be quickly implmeneted to track responsibilities and accuracy of entered data. This cFTE information
+      is often distributed at a system level to monitor productivity and distribute hospital resources to a department.
+      Below are a few example calculations and their corresponding definitions.
+      <br>
+      <br>
 
     <div class="content">
 
@@ -85,6 +78,19 @@
     <h1 class="subtitle"><strong>Data Schema Structure</strong></h1>
 
     <p style="padding-bottom: 24px">
+      Below is an example structure of 
+    </p>
+
+    <div class="content">
+            <div class="has-text-centered">
+            <figure class="image is-16x9 is-inline-block" style="max-width: 1000px">
+                <img src="/img/projects/mdm/mdm.svg" alt="Centered image">
+            </figure>
+            </div>
+    </div>
+
+
+    <p style="padding-bottom: 24px">
       users:
       departments:
       department_employees:
@@ -108,13 +114,7 @@ provider_effort
   provider_id, effective_date, cfte_definition_id, valid, last_modified_by
     </p>
 
-    <div class="content">
-            <div class="has-text-centered">
-            <figure class="image is-16x9 is-inline-block" style="max-width: 1000px">
-                <img src="/img/projects/mdm/mdm.svg" alt="Centered image">
-            </figure>
-            </div>
-    </div>
+
 
     </div>
 </section>
@@ -239,6 +239,15 @@ export default {
   data () {
     return {
       jc: "console.log('Hello World sup')",
+      tech_reqs: [
+        'UI users.',
+        'API users.',
+        'Analytics users.',
+        'Dynamic permissions',
+        'Backup and recovery.       Historical record'
+      ],
+
+
       // table: table,
       cfte_defs: [
         {'eqn': 'cFTE = Total_FTE - (Academic_FTE + Research_FTE + Administrative_FTE)', 
